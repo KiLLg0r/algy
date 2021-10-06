@@ -1,0 +1,122 @@
+nav {
+  // Dimenions
+  height: 3rem;
+  width: 100%;
+
+  // Dimenions and positioning
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // Box-model
+  padding-inline: 2rem;
+
+  // Abstracts
+  background-color: #454545;
+
+  // Font
+  text-transform: uppercase;
+
+  .logo {
+    // Abstracts
+    color: var(--accent);
+
+    // Font
+    font-size: 1.5rem;
+    font-family: "Orbitron", sans-serif;
+  }
+  .navbar-collapse {
+    // Display and positioning
+    display: flex;
+    align-items: center;
+
+    .links {
+      // Display and positioning
+      display: flex;
+
+      li {
+        // Box-model
+        margin-inline: 0.25rem;
+        list-style: none;
+        .nav-link {
+          // Font
+          text-decoration: none;
+          letter-spacing: 0.125px;
+
+          // Abstracts
+          color: var(--secondary);
+
+          &.active {
+            // Abstracts
+            color: var(--accent);
+          }
+        }
+      }
+    }
+
+    .search {
+      // Dimenions and positioning
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      // Dimensions
+      height: 1.8rem;
+      width: auto;
+
+      // Box-model
+      margin-left: 1rem;
+
+      // Abtracts
+      background: linear-gradient(90deg, transparent 50%, var(--accent) 50%, var(--accent) 90%, transparent 90%);
+
+      input {
+        // Dimensions
+        height: 100%;
+
+        // Abstracts
+        border-radius: 2rem;
+        border: none;
+
+        // Display and pos
+        position: relative;
+        z-index: 1;
+
+        // Font
+        text-indent: 1rem;
+      }
+      #searchButton {
+        // Display and pos
+        position: relative;
+        z-index: 0;
+        cursor: pointer;
+
+        // Font
+        font-size: 1.5rem;
+
+        // Box-model
+        padding: 0.15rem 0.5rem 0.15rem 0.5rem;
+
+        // Abstracts
+        background-color: var(--accent);
+        border-radius: 0 2rem 2rem 0;
+        color: var(--primary-shade-500);
+        border: none;
+      }
+    }
+  }
+
+  .line {
+    // Dimensions
+    height: 0.188rem;
+
+    // Box-model
+    position: absolute;
+    top: 1.5em;
+    margin: 10px 0 0 0;
+
+    // Abstracts
+    background: var(--accent);
+    border-radius: 0.188rem;
+  }
+}
