@@ -7,6 +7,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
 
   // Box-model
   padding-inline: 2rem;
@@ -17,35 +18,48 @@ nav {
   // Font
   text-transform: uppercase;
 
-  .hamburger-menu {
-    // Display
-    display: none;
-    cursor: pointer;
+  .brand {
+    // Display and positioning
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    // Abstracts
-    color: var(--secondary);
-    border-radius: 0.25rem;
-    background-color: var(--accent-shade-300);
-    
-    // Font
-    font-size: 1.5rem;
-    
-    // Box-model
-    padding: 0.25rem;
+    .hamburger-menu {
+      // Display
+      display: none;
+      cursor: pointer;
+
+      // Abstracts
+      color: var(--secondary);
+      border-radius: 0.25rem;
+      background-color: var(--accent-shade-300);
+
+      // Font
+      font-size: 1.5rem;
+
+      // Box-model
+      padding: 0.25rem;
+    }
+
+    .logo {
+      // Abstracts
+      color: var(--accent);
+
+      // Font
+      font-size: 1.5rem;
+      font-family: "Orbitron", sans-serif;
+    }
   }
 
-  .logo {
-    // Abstracts
-    color: var(--accent);
-
-    // Font
-    font-size: 1.5rem;
-    font-family: "Orbitron", sans-serif;
-  }
   .navbar-collapse {
     // Display and positioning
     display: flex;
     align-items: center;
+
+    &.active {
+      // Display
+      display: flex;
+    }
 
     .links {
       // Display and positioning
@@ -85,11 +99,13 @@ nav {
       margin-left: 1rem;
 
       // Abtracts
-      background: linear-gradient(90deg, transparent 50%, var(--accent) 50%, var(--accent) 90%, transparent 90%);
+      background-color: var(--accent);
+      border-radius: 2rem;
 
       input {
         // Dimensions
         height: 100%;
+        width: 100%;
 
         // Abstracts
         border-radius: 2rem;
@@ -140,10 +156,56 @@ nav {
 
 @media (max-width: 768px) {
   nav {
-    .hamburger-menu {
-      display: block;
+    // Display
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    // Dimenions
+    min-height: 5rem;
+    height: auto;
+    width: 100%;
+
+    // Box-model
+    padding-block: 1rem;
+
+    .brand {
+      .hamburger-menu {
+        // Display
+        display: block;
+      }
     }
+
     .navbar-collapse {
+      // Display
+      display: none;
+
+      &.active {
+        // Display
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+
+        // Box-model
+        padding: 1rem;
+
+        .links {
+          // Display and positioning
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 0.25rem;
+        }
+
+        .search {
+          // Box-model 
+          margin-top: 1rem;
+          margin-left: 0;
+        }
+      }
+    }
+
+    .line {
+      // Display
       display: none;
     }
   }

@@ -23,7 +23,9 @@
 // });
 
 var nav = $("nav");
+var navCollapse = $(".navbar-collapse");
 var line = $(".line");
+var hamburgerMenu = $(".hamburger-menu");
 
 activeLink();
 window.onresize = activeLink;
@@ -51,3 +53,14 @@ function activeLink() {
     });
   }
 }
+
+hamburgerMenu.click(function () {
+  navCollapse.toggleClass("active");
+  if (hamburgerMenu.hasClass("bx-menu")) {
+    hamburgerMenu.addClass("bx-menu-alt-right").removeClass("bx-menu");
+    // navCollapse.css("display", 'flex');
+  } else {
+    hamburgerMenu.addClass("bx-menu").removeClass("bx-menu-alt-right");
+    // navCollapse.css("display", 'none');
+  }
+});
