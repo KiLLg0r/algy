@@ -10,6 +10,15 @@ nav {
   background-color: #454545;
   text-transform: uppercase;
 }
+nav .hamburger-menu {
+  display: none;
+  cursor: pointer;
+  color: var(--secondary);
+  border-radius: 0.25rem;
+  background-color: var(--accent-shade-300);
+  font-size: 1.5rem;
+  padding: 0.25rem;
+}
 nav .logo {
   color: var(--accent);
   font-size: 1.5rem;
@@ -71,6 +80,14 @@ nav .line {
   border-radius: 0.188rem;
 }
 
+@media (max-width: 768px) {
+  nav .hamburger-menu {
+    display: block;
+  }
+  nav .navbar-collapse {
+    display: none;
+  }
+}
 :root {
   --accent-tint-100: #e8f6f8;
   --accent-tint-300: #bae3ea;

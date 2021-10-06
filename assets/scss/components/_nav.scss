@@ -17,6 +17,23 @@ nav {
   // Font
   text-transform: uppercase;
 
+  .hamburger-menu {
+    // Display
+    display: none;
+    cursor: pointer;
+
+    // Abstracts
+    color: var(--secondary);
+    border-radius: 0.25rem;
+    background-color: var(--accent-shade-300);
+    
+    // Font
+    font-size: 1.5rem;
+    
+    // Box-model
+    padding: 0.25rem;
+  }
+
   .logo {
     // Abstracts
     color: var(--accent);
@@ -118,5 +135,16 @@ nav {
     // Abstracts
     background: var(--accent);
     border-radius: 0.188rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    .hamburger-menu {
+      display: block;
+    }
+    .navbar-collapse {
+      display: none;
+    }
   }
 }
