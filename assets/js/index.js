@@ -58,9 +58,9 @@ hamburgerMenu.click(function () {
   navCollapse.toggleClass("active");
   if (hamburgerMenu.hasClass("bx-menu")) {
     hamburgerMenu.addClass("bx-menu-alt-right").removeClass("bx-menu");
-    // navCollapse.css("display", 'flex');
+    $(".brand").css("margin-top", "0.25rem");
   } else {
     hamburgerMenu.addClass("bx-menu").removeClass("bx-menu-alt-right");
-    // navCollapse.css("display", 'none');
+    $(".brand").css("margin-top", "0");
   }
 });
