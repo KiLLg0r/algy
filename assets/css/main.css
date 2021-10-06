@@ -100,9 +100,11 @@ nav .line {
     height: auto;
     width: 100%;
     padding-block: 1rem;
+    font-size: 1.25rem;
   }
   nav .brand .hamburger-menu {
     display: block;
+    font-size: 2rem;
   }
   nav .navbar-collapse {
     display: none;

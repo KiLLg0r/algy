@@ -169,10 +169,14 @@ nav {
     // Box-model
     padding-block: 1rem;
 
+    // Font
+    font-size: 1.25rem;
+
     .brand {
       .hamburger-menu {
         // Display
         display: block;
+        font-size: 2rem;
       }
     }
 
@@ -197,7 +201,7 @@ nav {
         }
 
         .search {
-          // Box-model 
+          // Box-model
           margin-top: 1rem;
           margin-left: 0;
         }
