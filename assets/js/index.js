@@ -35,6 +35,7 @@ hamburgerMenu.click(function () {
   if (hamburgerMenu.hasClass("bx-menu")) {
     hamburgerMenu.addClass("bx-menu-alt-right").removeClass("bx-menu");
     $(".brand").css("margin-top", "0.25rem");
+    // console.log(hamburgerMenu);
   } else {
     hamburgerMenu.addClass("bx-menu").removeClass("bx-menu-alt-right");
     $(".brand").css("margin-top", "0");
