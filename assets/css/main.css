@@ -121,6 +121,7 @@ nav .line {
     gap: 0.25rem;
   }
   nav .navbar-collapse.active .search {
+    height: 3rem;
     margin-top: 1rem;
     margin-left: 0;
   }
