@@ -1,27 +1,3 @@
-// $(document).ready(function () {
-//   var form = document.querySelector(".search");
-//   var formInput = document.querySelector("#searchField");
-//   var button = document.querySelector("#searchButton");
-
-//   formInput.click(function () {
-//     var val = formInput.val();
-
-//     $.ajax({
-//       type: "POST",
-//       url: "./php/search.php",
-//       data: { searchItem: val },
-//       dataType: "text",
-//       success: function (data) {
-//         $(".container").load("result.php").append(data);
-//         document.location('result.php');
-//       },
-//       error: function (data) {
-//         $(".container").append("ERROR");
-//       },
-//     });
-//   });
-// });
-
 var nav = $("nav");
 var navCollapse = $(".navbar-collapse");
 var line = $(".line");
